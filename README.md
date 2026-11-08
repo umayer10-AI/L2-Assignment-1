@@ -8,7 +8,7 @@ The main purpose of this assignment is to practice TypeScript concepts such as f
 ## Project Structure
 
 ```text
-typescript-assignment/
+L2-assignment-1/
 │
 ├── solutions.ts
 ├── type-vs-interface.md
