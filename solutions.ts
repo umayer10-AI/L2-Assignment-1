@@ -2,9 +2,6 @@
 const multiplyValue = (value: number, multiplier: number = 2): number => {
     return value * multiplier
 }
-multiplyValue(10)
-multiplyValue(10, 5)
-multiplyValue(7, 0)
 
 
 
@@ -26,10 +23,6 @@ const processInput = (value: Value): string | number => {
     return "Invalid input"
     
 }
-processInput("  TypeScript  ")
-processInput(7)
-processInput(true)
-processInput(false)
 
 
 
@@ -41,8 +34,6 @@ const formatCoordinate = (s: tuple): string => {
     return `Location: ${s[2]} (${s[0]}, ${s[1]})`
 }
 
-formatCoordinate([23.81, 90.41, "Dhaka"])
-formatCoordinate([22.35, 91.78, "Chittagong"])
 
 
 
@@ -52,8 +43,7 @@ formatCoordinate([22.35, 91.78, "Chittagong"])
 const concatenateArrays = <T>(...arr: T[][]): T[] => {
     return arr.flat()
 }
-concatenateArrays(["a", "b"], ["c", "d"])
-concatenateArrays([1, 2], [3, 4], [5])
+
 
 
 
@@ -69,14 +59,6 @@ const getPopularCourses = (c: Course[], num: number): Course[] => {
     return c.filter(v => v.isPublished && v.students >= num)
 }
 
-const courses = [
-  { title: "TypeScript Mastery", students: 120, isPublished: true },
-  { title: "Draft Course", students: 200, isPublished: false },
-  { title: "Basic HTML", students: 45, isPublished: true },
-  { title: "Next.js Pro", students: 85, isPublished: true }
-];
-
-getPopularCourses(courses, 80)
 
 
 
@@ -87,14 +69,6 @@ const pluckValues = <T, K extends keyof T>(items: T[],key: K): T[K][] => {
     return items.map(v => v[key]);
 };
 
-const users = [
-  { id: 1, name: "Rakib", role: "Admin" },
-  { id: 2, name: "Sadia", role: "Editor" },
-  { id: 3, name: "Tariq", role: "Subscriber" }
-];
-
-pluckValues(users, "name")
-pluckValues(users, "id")
 
 
 
@@ -129,9 +103,6 @@ class Manager extends Employee {
     }
 }
 
-const manager = new Manager("Alice", 50000, "Engineering");
-manager.getDetails();
-manager.getRoleInfo();
 
 
 
@@ -151,6 +122,3 @@ const validateAgeAsync = (age: number): Promise<string> => {
         }, 1000);
     });
 }
-
-await validateAgeAsync(20);
-await validateAgeAsync(15);
